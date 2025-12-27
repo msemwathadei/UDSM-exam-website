@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UDSM Online Examination</title>
+  <link rel="stylesheet" href="../css/exam.css">
+
+</head>
+<body>
+ 
+
+  <div class="container">
+    <div style="display:flex; align-items:center; justify-content:center; gap:15px; margin-bottom:10px;">
+      <img src="../images/udsm-logo.png" alt="UDSM Logo" style="height:70px;" />
+      <div>
+        <h1 style="margin:0;">University of Dar es Salaam</h1>
+        <p style="margin:0; font-weight:bold; color:#003366;">Online Examination System</p>
+      </div>
+    </div>
+
+    <div class="exam-info">
+      <div><strong>Exam:</strong> Programming, Networking & Database</div>
+      <div><strong>Time Remaining:</strong> <span id="timer">00:15:00</span></div>
+    </div>
+
+    <form id="examForm">
+
+      <!-- Programming Questions -->
+      <div class="question">
+        <h3>1. Which of the following is a correct variable declaration in C?</h3>
+        <div class="options">
+          <label><input type="radio" name="q1"> int x;</label>
+          <label><input type="radio" name="q1"> x = int;</label>
+          <label><input type="radio" name="q1"> int = x;</label>
+          <label><input type="radio" name="q1"> declare x;</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>2. Which data structure uses FIFO principle?</h3>
+        <div class="options">
+          <label><input type="radio" name="q2"> Stack</label>
+          <label><input type="radio" name="q2"> Queue</label>
+          <label><input type="radio" name="q2"> Tree</label>
+          <label><input type="radio" name="q2"> Graph</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>3. What does HTML stand for?</h3>
+        <div class="options">
+          <label><input type="radio" name="q3"> HyperText Markup Language</label>
+          <label><input type="radio" name="q3"> HighText Machine Language</label>
+          <label><input type="radio" name="q3"> HyperTool Multi Language</label>
+          <label><input type="radio" name="q3"> None of the above</label>
+        </div>
+      </div>
+
+      <!-- Networking Questions -->
+      <div class="question">
+        <h3>4. Which device connects different networks together?</h3>
+        <div class="options">
+          <label><input type="radio" name="q4"> Switch</label>
+          <label><input type="radio" name="q4"> Hub</label>
+          <label><input type="radio" name="q4"> Router</label>
+          <label><input type="radio" name="q4"> Repeater</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>5. Which protocol is used to send emails?</h3>
+        <div class="options">
+          <label><input type="radio" name="q5"> FTP</label>
+          <label><input type="radio" name="q5"> SMTP</label>
+          <label><input type="radio" name="q5"> HTTP</label>
+          <label><input type="radio" name="q5"> SNMP</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>6. What does IP stand for?</h3>
+        <div class="options">
+          <label><input type="radio" name="q6"> Internet Process</label>
+          <label><input type="radio" name="q6"> Internet Protocol</label>
+          <label><input type="radio" name="q6"> Internal Program</label>
+          <label><input type="radio" name="q6"> Information Path</label>
+        </div>
+      </div>
+
+      <!-- Database Questions -->
+      <div class="question">
+        <h3>7. Which SQL command is used to retrieve data?</h3>
+        <div class="options">
+          <label><input type="radio" name="q7"> INSERT</label>
+          <label><input type="radio" name="q7"> UPDATE</label>
+          <label><input type="radio" name="q7"> SELECT</label>
+          <label><input type="radio" name="q7"> DELETE</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>8. A table row in a database is also known as?</h3>
+        <div class="options">
+          <label><input type="radio" name="q8"> Field</label>
+          <label><input type="radio" name="q8"> Record</label>
+          <label><input type="radio" name="q8"> Attribute</label>
+          <label><input type="radio" name="q8"> Key</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>9. Which key uniquely identifies each record in a table?</h3>
+        <div class="options">
+          <label><input type="radio" name="q9"> Foreign Key</label>
+          <label><input type="radio" name="q9"> Primary Key</label>
+          <label><input type="radio" name="q9"> Candidate Key</label>
+          <label><input type="radio" name="q9"> Composite Key</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>10. Which database model uses tables?</h3>
+        <div class="options">
+          <label><input type="radio" name="q10"> Hierarchical</label>
+          <label><input type="radio" name="q10"> Network</label>
+          <label><input type="radio" name="q10"> Relational</label>
+          <label><input type="radio" name="q10"> Object-oriented</label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="cancelBtn" style="background:#dc3545; margin-right:15px;">Cancel</button>
+        <button type="submit" id="submitBtn" style="background:#007bff;">Submit Exam</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../js/exam.js"></script>
+</body>
+</html>
