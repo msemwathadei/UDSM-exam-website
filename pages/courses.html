@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UDSM Online Examination System</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+          /* Table styling */
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0 40px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table header styling */
+        th {
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+            color: rgb(15, 34, 207);
+            padding: 18px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05em;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        /* Table cell styling */
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        /* Hover effect for table rows */
+        tr:hover td {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            transform: scale(1.01);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Remove border from last row */
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Alternate row coloring */
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* First column (Course Code) styling */
+        td:first-child {
+            font-weight: 600;
+            /* color: #1e3c72; */
+            width: 15%;
+        }
+
+        /* Second column (Course Name) styling */
+        td:nth-child(2) {
+            width: 65%;
+        }
+
+        /* Third column (Credit) styling */
+        td:last-child {
+            text-align: left;
+            font-weight: 600;
+            /* color: #667eea; */
+            width: 20%;
+        }
+
+        /* Spacing between program sections */
+        h1:not(:first-of-type) {
+            margin-top: 80px;
+            border-top: 3px solid #e9ecef;
+            padding-top: 50px;
+        }
+        h2{
+           padding-bottom: 15px;
+           text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <h4>Online Examination System</h4>
+    </div>
+    
+    <div class="header">
+        <img src="../images/tz-logo.png" alt="Tanzania Logo">
+    
+        <div class="title">
+            <h1>UNIVERSITY OF DAR ES SALAAM</h1>
+        </div>
+    
+        <img src="../images/udsm-logo.png" alt="UDSM Logo">
+    </div>
+    
+    <nav class="navbar">
+        <ul>
+           <li><a href="pages/login.html">Student Login</a></li>
+            <li><a href="pages/instructions.html">Exam Instructions</a></li>
+            <li><a href="pages/exam.html">Start Exam</a></li>
+            <li><a href="pages/results.html">Results</a></li>
+            <li><a href="pages/courses.html">Courses</a></li>
+            <li><a href="pages/timetable.html">Timetable</a></li>
+            <li><a href="pages/rules.html">Rules</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
+            <li><a href="pages/contact.html">Help Desk</a></li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center;padding-bottom: 20px;">Available Courses</h1>
+    <h2>Bachelor of Science in Computer Science</h2>
+
+    <h3>First Year</h3>
+    <table >
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>CL 111</td>
+            <td>Communication Skills for Engineers</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>DS 112</td>
+            <td>Development Perspectives I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>MT 100</td>
+            <td>Foundations of Analysis</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 151</td>
+            <td>Computer Organization and Architecture I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 174</td>
+            <td>Programming in C</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 162</td>
+            <td>Introduction to Information Systems</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 158</td>
+            <td>Computer Hardware and System Maintenance</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 173</td>
+            <td>Business Computer Communication</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 143</td>
+            <td>Discrete Structures</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 171</td>
+            <td>Introduction to Computer Networks</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 175</td>
+            <td>Programming in Java</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 181</td>
+            <td>Web Programming</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>DS 113</td>
+            <td>Development Perspectives II</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+    <h3>Second Year</h3>
+    <table >
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>IS 243</td>
+            <td>Computer Network Design and Administration</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 238</td>
+            <td>Mobile Application Development</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 274</td>
+            <td>Object Oriented Analysis and Design</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 237</td>
+            <td>Data Abstraction and Algorithms</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 264</td>
+            <td>Principles of Database Systems</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 246</td>
+            <td>Principles of Computer Graphics</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 247</td>
+            <td>Game Theory and Applications</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 248</td>
+            <td>Multimedia Systems</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 252</td>
+            <td>Computer Organization and Architecture II</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>MT 249</td>
+            <td>Mathematical Logic and Formal Semantics</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 236</td>
+            <td>Structured Systems Analysis and Design</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 234</td>
+            <td>Object Oriented Programming in Java</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 239</td>
+            <td>Algorithms and Complexity</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 283</td>
+            <td>Web Services and Technologies</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 265</td>
+            <td>Introduction to GIS</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>MT 278</td>
+            <td>Linear Programming</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <h3>Third Year</h3>
+    <table >
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>IS 344</td>
+            <td>Human Computer Interaction</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 343</td>
+            <td>Practical Training II</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 367</td>
+            <td>Management of Information Systems</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 371</td>
+            <td>Systems Administration in Linux</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 334</td>
+            <td>Principles of Operating Systems</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>CS 335</td>
+            <td>Software Engineering</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IE 445</td>
+            <td>Entrepreneurship for Engineers</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 335</td>
+            <td>Principles of Systems Security</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 336</td>
+            <td>Mobile Computing</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 337</td>
+            <td>Artificial Intelligence</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 365</td>
+            <td>Data Mining and Warehousing</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 345</td>
+            <td>IT Audit and Controls</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 368</td>
+            <td>Open Source, Innovation and Emerging Technologies</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 369</td>
+            <td>Final Year Project</td>
+            <td>16</td>
+        </tr>
+    </table>
+
+    <h2>Bachelor of Science in Computer Engineering and Information Technology</h2>
+
+    <h3>First Year</h3>
+    <table >
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>CL 111</td>
+            <td>Communication Skills for Engineers</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>ES 173</td>
+            <td>Introduction to Electrical Circuits</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>DS 112</td>
+            <td>Development Perspectives I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>ME 101</td>
+            <td>Engineering Drawing</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>MT 161</td>
+            <td>Matrices and Basic Calculus for Non-Major</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>ES 171</td>
+            <td>Computer Aided Drafting and Design</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>ES 110</td>
+            <td>Analogue Electronics I</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 174</td>
+            <td>Programming in C</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 158</td>
+            <td>Computer Hardware and System Maintenance</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>MT 171</td>
+            <td>One Variable Calculus & Differential Equations</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 171</td>
+            <td>Introduction to Computer Networks</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>ES 120</td>
+            <td>Digital Electronics I</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 175</td>
+            <td>Programming in Java</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>TE 172</td>
+            <td>Workshop Training</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 173</td>
+            <td>Business Computer Communication</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>DS 113</td>
+            <td>Development Perspectives II</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+    <h3>Second Year</h3>
+    <table >
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>MT 261</td>
+            <td>Several Variable Calculus for Non-Majors</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>PT1_CS</td>
+            <td>Practical Training I</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>ES 211</td>
+            <td>Analogue Electronics II</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 151</td>
+            <td>Computer Organization and Architecture I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 211</td>
+            <td>Measurements & Instrumentation Engineering I</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 274</td>
+            <td>Object Oriented Analysis and Design</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 243</td>
+            <td>Computer Network Design and Administration</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>ES 221</td>
+            <td>Digital Electronics II</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 236</td>
+            <td>Structured Systems Analysis and Design</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>TE 231</td>
+            <td>Computer Organization and Architecture II</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 252</td>
+            <td>Object Oriented Programming in Java</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 234</td>
+            <td>Measurements and Instrumentation Engineering II</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 212</td>
+            <td>Fundamentals of Signals and Systems</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <h3>Third Year</h3>
+    <table >
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>CS 350</td>
+            <td>Micro Computer Systems I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>PT2_CS</td>
+            <td>Practical Training II</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 334</td>
+            <td>Principles of Operating Systems</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 335</td>
+            <td>Software Engineering</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 264</td>
+            <td>Principles of Database Systems</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 336</td>
+            <td>Principles of Systems Security</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 323</td>
+            <td>Control Systems Engineering</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 348</td>
+            <td>Network Switching and Routing</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 354</td>
+            <td>Microcomputer Systems II</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 356</td>
+            <td>Embedded Systems</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 365</td>
+            <td>Artificial Intelligence</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <h3>Fourth Year</h3>
+    <table >
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>SC 430</td>
+            <td>General Engineering Procedures and Ethics</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>PT3_CS</td>
+            <td>Practical Training III</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IE 445</td>
+            <td>Entrepreneurship for Engineers</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 420</td>
+            <td>Modern Control Systems Engineering</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 441</td>
+            <td>Wide Area Networking</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 371</td>
+            <td>Systems Administration in Linux</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 433</td>
+            <td>Software Quality Assurance and Testing</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 454</td>
+            <td>Computer Organization and Architecture III</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>TE 415</td>
+            <td>Optical Communication</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>CS 498</td>
+            <td>Final Year Project I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 499</td>
+            <td>Final Year Project II</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+
+    <h2>Bachelor of Science in Business Information Technology</h2>
+
+    <h3>First Year</h3>
+    <table>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>CS 174</td>
+            <td>Programming in C</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>DS 112</td>
+            <td>Development Perspectives I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>ST 113</td>
+            <td>Basic Statistics</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>AC 100</td>
+            <td>Principles of Accounting I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>FN 100</td>
+            <td>Principles of Microeconomic Analysis</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>MK 100</td>
+            <td>Introduction to Business</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 173</td>
+            <td>Business Computer Communication</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>ST 114</td>
+            <td>Probability Theory I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 171</td>
+            <td>Introduction to Computer Networks</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 181</td>
+            <td>Web Programming</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>FN 101</td>
+            <td>Principles of Macroeconomic Analysis</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>GM 100</td>
+            <td>Principles and Practice of Management</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>DS 113</td>
+            <td>Development Perspectives II</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+    <h3>Second Year</h3>
+    <table >
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>IS 237</td>
+            <td>Data Abstraction and Algorithms</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 264</td>
+            <td>Principles of Database Systems</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 274</td>
+            <td>Object-Oriented Analysis and Design</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 243</td>
+            <td>Practical Training I</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>ST 119</td>
+            <td>Operations Research I</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 234</td>
+            <td>Object-Oriented Programming in Java</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 238</td>
+            <td>Mobile Application Development</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 284</td>
+            <td>Business Process Management</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 285</td>
+            <td>Programming in R</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>GM 200</td>
+            <td>Business Law and Ethics</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <h3>Third Year</h3>
+    <table >
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credit</th>
+        </tr>
+        <tr>
+            <td>CS 334</td>
+            <td>Principles of Operating Systems</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 335</td>
+            <td>Software Engineering</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 369</td>
+            <td>IT Audit and Controls</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>MK 301</td>
+            <td>Entrepreneurship</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 384</td>
+            <td>Software Project Management</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 385</td>
+            <td>Business Intelligence</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 386</td>
+            <td>Enterprise Systems</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 336</td>
+            <td>Principles of Systems Security</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 335</td>
+            <td>Final Year Project</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>CS 336</td>
+            <td>Trends and Social-Cultural Implications of Information Technology</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 371</td>
+            <td>Systems Administration in Linux</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>FN 302</td>
+            <td>Securities Analysis and Portfolio Management</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>GM 300</td>
+            <td>Strategic Management</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>ST 316</td>
+            <td>Statistical Quality Control</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 387</td>
+            <td>Environmental Management Information Systems</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>ST 318</td>
+            <td>Sampling Theory and Methodology</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>IS 337</td>
+            <td>Mobile Computing</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>IS 365</td>
+            <td>Artificial Intelligence</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <body>
+        <h2>Bachelor of Science in Electronic Science and Communication</h2>
+
+        <h3>Common Core Courses for all Students</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>DS 112</td>
+                <td>Development Perspectives I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>DS 113</td>
+                <td>Development Perspectives II</td>
+                <td>12</td>
+            </tr>
+        </table>
+
+        <h3>Common Elective Courses for all Science Students</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>SC 215</td>
+                <td>Science Methods</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>DS 211</td>
+                <td>Entrepreneurship</td>
+                <td>12</td>
+            </tr>
+        </table>
+
+        <h3>First Year</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>ES 102</td>
+                <td>Practicals in Electronics</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 110</td>
+                <td>Analogue Electronics I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 115</td>
+                <td>Electromagnetics and Optics</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IS 136</td>
+                <td>Programming in C</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>MT 100</td>
+                <td>Foundation of Analysis</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>MT 127</td>
+                <td>Linear Algebra I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>BM 100</td>
+                <td>Principles of Management and Administration</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>CL 107</td>
+                <td>Communication Skills for Scientist</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 101</td>
+                <td>Technical Drawing, Laboratory and Workshop Administration</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 105</td>
+                <td>Fundamentals of Computer Architecture</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 120</td>
+                <td>Digital Electronics I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>MT 120</td>
+                <td>Analysis I: Functions of a Single Variable</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 240</td>
+                <td>Industrial Training</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IS 138</td>
+                <td>Social-Cultural Implication of Information Technology</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IS 137</td>
+                <td>Data Structure and Algorithms</td>
+                <td>12</td>
+            </tr>
+        </table>
+
+        <h3>Second Year</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>ES 211</td>
+                <td>Analogue Electronics II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 212</td>
+                <td>Analogue Electronics Practical</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>EV 200</td>
+                <td>Environmental Sciences</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>PH 201</td>
+                <td>Mathematical Methods I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>MT 233</td>
+                <td>Mathematical Statistics I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IS 245</td>
+                <td>Operating Systems I</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IS 262</td>
+                <td>Compiler Technology</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IS 271</td>
+                <td>Computer Networks</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 202</td>
+                <td>Quantum Electronics</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 221</td>
+                <td>Digital Electronics II</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 222</td>
+                <td>Digital Electronics Practical</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IS 292</td>
+                <td>Object-Oriented Programming Concepts</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 340</td>
+                <td>Industrial Training II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IS 281</td>
+                <td>Network Design and Administration</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IS 263</td>
+                <td>Database Concepts</td>
+                <td>12</td>
+            </tr>
+        </table>
+
+        <h3>Third Year</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>ES 310</td>
+                <td>Electronics Instrumentation I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 334</td>
+                <td>Signal Processing I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 318</td>
+                <td>Electronics Control</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 399</td>
+                <td>Projects in Electronics I</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 399</td>
+                <td>Projects in Electronics II</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 300</td>
+                <td>Computer Aided Design and Analysis</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 304</td>
+                <td>Microelectronics</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 311</td>
+                <td>Electronics Instrumentation II</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 322</td>
+                <td>Industrial Electronics</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 316</td>
+                <td>PC Interfacing Techniques</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <h3>Electronics Stream</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>ES 300</td>
+                <td>Computer Aided Design and Analysis</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 304</td>
+                <td>Microelectronics</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 311</td>
+                <td>Electronics Instrumentation II</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 322</td>
+                <td>Industrial Electronics</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 316</td>
+                <td>PC Interfacing Techniques</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <h3>Communication Stream</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>TE 412</td>
+                <td>Introduction to Wireless Communications</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 335</td>
+                <td>Signal Processing II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 330</td>
+                <td>Telecommunication I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 332</td>
+                <td>Opto-Electronics</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 314</td>
+                <td>Microprocessor Theory and Practices</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 320</td>
+                <td>Nuclear Electronics</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 322</td>
+                <td>Industrial Electronics</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 337</td>
+                <td>High Frequency Communication System Design</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>TE 411</td>
+                <td>Microwave Communications</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>EV 300</td>
+                <td>Environmental Science II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 306</td>
+                <td>VLSI Circuit Design</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 319</td>
+                <td>Communication Systems Design</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 339</td>
+                <td>Ultra-Fast Electronics Techniques</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 341</td>
+                <td>Communication Digital Signal Processing</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 343</td>
+                <td>Emerging Electronics and Communication Technologies</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IS 364</td>
+                <td>IT Security</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IS 383</td>
+                <td>Internet Applications and Programming</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TM 400</td>
+                <td>Engineering Ethics and Professional Conduct</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>MG 445</td>
+                <td>Entrepreneurship for Engineers</td>
+                <td>12</td>
+            </tr>
+        </table>
+        <h2>Bachelor of Science in Electronics Engineering</h2>
+
+        <h3>First Year</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>CL 111</td>
+                <td>Communication Skills for Engineers</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>CS 174</td>
+                <td>Programming in C</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>DS 112</td>
+                <td>Development Perspectives I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>MT 161</td>
+                <td>Matrices and Basic Calculus for Non-Major</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ME 101</td>
+                <td>Engineering Drawing</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 173</td>
+                <td>Introduction to Electrical Circuits</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 171</td>
+                <td>Computer Aided Drafting and Design (CADD)</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>DS 113</td>
+                <td>Development Perspectives II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IS 171</td>
+                <td>Introduction to Computer Networks</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>CS 175</td>
+                <td>Programming in Java</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>MT 171</td>
+                <td>One Variable Calculus & Diff. Eq. for Non-Major</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>TE 172</td>
+                <td>Workshop Training</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 110</td>
+                <td>Analogue Electronics I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 120</td>
+                <td>Digital Electronics I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>TE 101</td>
+                <td>Introduction to Telecommunication</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <h3>Second Year</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>ES 213</td>
+                <td>Electronics Measurements and Instrumentation I</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IS 274</td>
+                <td>Object Oriented Analysis and Design</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IS 158</td>
+                <td>Computer Hardware and System Maintenance</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>CS 243</td>
+                <td>Computer Network Design and Administration</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>EE 253</td>
+                <td>Engineering Electromagnetics I</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>MT 261</td>
+                <td>Several Variable Calculus for Non-majors</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 211</td>
+                <td>Analogue Electronics II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 212</td>
+                <td>Analogue Electronics Practical</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>CS 234</td>
+                <td>Object Oriented Programming in Java</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>EE 254</td>
+                <td>Engineering Electromagnetics II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>MT 271</td>
+                <td>Statistics for Non-majors</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 221</td>
+                <td>Digital Electronics II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 222</td>
+                <td>Digital Electronics Practical</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TE 231</td>
+                <td>Fundamentals of Signals and Systems</td>
+                <td>12</td>
+            </tr>
+        </table>
+
+        <h3>Third Year</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>CS 323</td>
+                <td>Control Systems Engineering</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>CS 353</td>
+                <td>Micro Computer Systems I</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 313</td>
+                <td>Analogue Electronics III</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 319</td>
+                <td>Hardware Interfacing Techniques</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 311</td>
+                <td>Electronics Measurements and Instrumentation II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 312</td>
+                <td>System Design and Implementation</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 324</td>
+                <td>Digital Electronics III</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 329</td>
+                <td>Microelectronics I</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TE 371</td>
+                <td>Introduction to Research Methods</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>CS 348</td>
+                <td>Network Switching and Routing</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IS 344</td>
+                <td>Human Computer Interaction</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IS 264</td>
+                <td>Principals of Database Systems</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>EE 313</td>
+                <td>Power Electronics I</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TE 335</td>
+                <td>Introduction to Analogue Filters</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <h3>Electives (Third Year)</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>TE 336</td>
+                <td>Satellite Communications</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TE 337</td>
+                <td>Tele-traffic Engineering</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TE 331</td>
+                <td>Principles of Analogue Telecommunications</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>TE 380</td>
+                <td>Digital Signal Processing (DSP)</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 315</td>
+                <td>Automation and Industrial Electronics</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>IE 354</td>
+                <td>Engineering Project Management</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IS 365</td>
+                <td>Artificial Intelligence</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>EE 314</td>
+                <td>Power Electronics II</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 314</td>
+                <td>Quantum Electronics</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TE 338</td>
+                <td>Mobile Web Communication Services</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TE 339</td>
+                <td>Telecommunication Switching and Transmission</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <h3>Electronics Science Track</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>ES 415</td>
+                <td>Optoelectronic Devices</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 416</td>
+                <td>Microelectronics II</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 414</td>
+                <td>Solid State Electronics</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>ES 417</td>
+                <td>Ultra-fast Electronics Technologies</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <h3>Electives (Both Electronics Science and Embedded Electronics Tracks)</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>CS 421</td>
+                <td>Modern Control Systems Engineering</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IE 440</td>
+                <td>Engineering Economics</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>IE 441</td>
+                <td>Human Resources Management</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <h3>Elective (Final Year)</h3>
+        <table >
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>TE 443</td>
+                <td>Digital Broadcasting Technologies</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TE 411</td>
+                <td>Microwave Communication</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>TE 447</td>
+                <td>Wireless Technologies</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>CS 441</td>
+                <td>High Speed Network Technologies</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>TE 412</td>
+                <td>Mobile Communication</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>ES 418</td>
+                <td>Nuclear Electronics</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+            <h2>Bachelor of Science in Telecommunications Engineering</h2>
+            
+            <!-- ================= FIRST YEAR ================= -->
+            <h3>First Year</h3>
+            <table>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit</th>
+                </tr>
+                <tr><td>DS 112</td><td>Development Perspectives I</td><td>12</td></tr>
+                <tr><td>DS 113</td><td>Development Perspectives II</td><td>12</td></tr>
+                <tr><td>CL 111</td><td>Communication Skills for Engineers</td><td>12</td></tr>
+                <tr><td>CS 174</td><td>Programming in C</td><td>12</td></tr>
+                <tr><td>ES 171</td><td>Computer Aided Drafting and Design (CADD)</td><td>8</td></tr>
+                <tr><td>ES 173</td><td>Introduction to Electrical Circuits</td><td>12</td></tr>
+                <tr><td>ME 101</td><td>Engineering Drawing</td><td>8</td></tr>
+                <tr><td>MT 161</td><td>Matrices and Basic Calculus for Non-Majors</td><td>12</td></tr>
+                <tr><td>CS 175</td><td>Programming in Java</td><td>12</td></tr>
+                <tr><td>ES 110</td><td>Analogue Electronics I</td><td>8</td></tr>
+                <tr><td>ES 120</td><td>Digital Electronics I</td><td>8</td></tr>
+                <tr><td>IS 171</td><td>Introduction to Computer Networks</td><td>8</td></tr>
+                <tr><td>MT 171</td><td>One Variable Calculus & Differential Equations</td><td>12</td></tr>
+                <tr><td>TE 101</td><td>Introduction to Telecommunication</td><td>8</td></tr>
+                <tr><td>TE 172</td><td>Workshop Training</td><td>8</td></tr>
+            </table>
+            
+            <!-- ================= SECOND YEAR ================= -->
+            <h3>Second Year</h3>
+            <table>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit</th>
+                </tr>
+                <tr><td>ES 213</td><td>Electronics Measurements and Instrumentation I</td><td>8</td></tr>
+                <tr><td>IS 274</td><td>Object Oriented Analysis and Design</td><td>12</td></tr>
+                <tr><td>IS 158</td><td>Computer Hardware and System Maintenance</td><td>8</td></tr>
+                <tr><td>CS 243</td><td>Computer Network Design and Administration</td><td>12</td></tr>
+                <tr><td>EE 253</td><td>Engineering Electromagnetics I</td><td>12</td></tr>
+                <tr><td>MT 261</td><td>Several Variable Calculus for Non-Majors</td><td>12</td></tr>
+                <tr><td>ES 211</td><td>Analogue Electronics II</td><td>8</td></tr>
+                <tr><td>ES 212</td><td>Analogue Electronics Practical</td><td>8</td></tr>
+                <tr><td>CS 234</td><td>Object Oriented Programming in Java</td><td>12</td></tr>
+                <tr><td>MT 271</td><td>Statistics for Non-Majors</td><td>8</td></tr>
+                <tr><td>ES 221</td><td>Digital Electronics II</td><td>8</td></tr>
+                <tr><td>ES 222</td><td>Digital Electronics Practical</td><td>8</td></tr>
+                <tr><td>TE 231</td><td>Fundamentals of Signals and Systems</td><td>12</td></tr>
+                <tr><td>EE 254</td><td>Engineering Electromagnetics II</td><td>12</td></tr>
+            </table>
+            
+            <!-- ================= THIRD YEAR ================= -->
+            <h3>Third Year</h3>
+            <table>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit</th>
+                </tr>
+                <tr><td>CS 323</td><td>Control Systems Engineering</td><td>12</td></tr>
+                <tr><td>TE 331</td><td>Principles of Analogue Telecommunications</td><td>12</td></tr>
+                <tr><td>TE 380</td><td>Digital Signal Processing (DSP)</td><td>12</td></tr>
+                <tr><td>TE 332</td><td>Principles of Digital Telecommunications</td><td>12</td></tr>
+                <tr><td>TE 339</td><td>Telecommunication Switching and Transmission</td><td>8</td></tr>
+                <tr><td>TE 334</td><td>Information Theory</td><td>8</td></tr>
+                <tr><td>TE 371</td><td>Introduction to Research Methods</td><td>8</td></tr>
+                <tr><td>ES 324</td><td>System Design and Implementation</td><td>8</td></tr>
+            </table>
+            
+            <h3>Third Year – Elective Courses (Minimum 24 Credits)</h3>
+            <table>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit</th>
+                </tr>
+                <tr><td>CS 348</td><td>Network Switching and Routing</td><td>12</td></tr>
+                <tr><td>EE 313</td><td>Power Electronics I</td><td>12</td></tr>
+                <tr><td>ES 313</td><td>Analogue Electronics III</td><td>12</td></tr>
+                <tr><td>ES 312</td><td>Digital Electronics III</td><td>12</td></tr>
+                <tr><td>CS 441</td><td>High Speed Network Technologies</td><td>12</td></tr>
+            </table>
+            
+            <!-- ================= FOURTH YEAR ================= -->
+            <h3>Fourth Year</h3>
+            <table>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Credit</th>
+                </tr>
+                <tr><td>DP 471</td><td>Electrical Safety and Maintenance</td><td>8</td></tr>
+                <tr><td>TE 411</td><td>Microwave Communication</td><td>12</td></tr>
+                <tr><td>TE 413</td><td>Telecommunications Networks</td><td>12</td></tr>
+                <tr><td>TE 441</td><td>Analogue Electronics for Engineers III</td><td>12</td></tr>
+                <tr><td>TM 400</td><td>Engineering Ethics and Professional Conduct</td><td>8</td></tr>
+                <tr><td>TM 330</td><td>General Engineering Procedures</td><td>8</td></tr>
+                <tr><td>MG 445</td><td>Entrepreneurship for Engineers</td><td>8</td></tr>
+                <tr><td>TE 412</td><td>Introduction to Wireless Communication</td><td>12</td></tr>
+                <tr><td>TE 442</td><td>Digital Electronics for Engineers III</td><td>12</td></tr>
+                <tr><td>TE 499</td><td>Final Project</td><td>16</td></tr>
+            </table>
+            
+    </body>
+
+
+</html>
