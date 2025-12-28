@@ -116,6 +116,12 @@
         border-color: #1e3c72;
         box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.15);
       }
+      /* Center Time, Course Code, and Venue columns */
+      .timetable td:nth-child(2),
+      .timetable td:nth-child(3),
+      .timetable td:nth-child(4) {
+        text-align: center;
+      }
     </style>
     <script src="../js/timetable-filter.js" defer></script>
   </head>
@@ -291,13 +297,20 @@
         period.
       </p>
 
-      <p style="margin-top: 30px; padding: 10px 14px;
-        width: 220px;
-        border-radius: 8px;
-        border: 1px solid #ccd5e0;
-        font-size: 0.95em;
-        transition: all 0.2s ease;">
-        <a style="color: inherit; text-decoration: none;" href="../index.html">← Back to Home</a>
+      <p
+        style="
+          margin-top: 30px;
+          padding: 10px 14px;
+          width: 220px;
+          border-radius: 8px;
+          border: 1px solid #ccd5e0;
+          font-size: 0.95em;
+          transition: all 0.2s ease;
+        "
+      >
+        <a style="color: inherit; text-decoration: none" href="../index.html"
+          >← Back to Home</a
+        >
       </p>
     </main>
   </body>
