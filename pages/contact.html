@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDSM Online Examination System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .top-bar {
+            background: white;
+            color: #1e3c72;
+            padding: 12px 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .top-bar h4 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .header {
+            background: white;
+            padding: 25px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            gap: 20px;
+        }
+
+        .header img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .title {
+            flex: 1;
+            text-align: center;
+        }
+
+        .title h1 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .navbar {
+            background: #2a5298;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .navbar li {
+            margin: 0;
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 16px 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .navbar a:hover {
+            background: rgba(255,255,255,0.1);
+            border-bottom-color: #ffd700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .enquiry-header {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .enquiry-content {
+            display: inline-block;
+            animation: scrollText 15s linear infinite;
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .enquiry-header h2 {
+            color: #1e3c72;
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .enquiry-header p {
+            color: #555;
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .contact-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .left-section, .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .section h3 {
+            color: #2a5298;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ffd700;
+            font-weight: 700;
+        }
+
+        .section h4 {
+            color: #1e3c72;
+            font-size: 1.1rem;
+            margin: 12px 0 10px 0;
+            font-weight: 600;
+        }
+
+        .section p {
+            color: #444;
+            margin: 8px 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .section a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .section a:hover {
+            color: #1e3c72;
+            text-decoration: underline;
+        }
+
+        .general-contacts {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .general-contacts h3 {
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .general-contacts a {
+            color: #ffd700;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .general-contacts a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 968px) {
+            .contact-flex {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+	<div class="top-bar">
+		<h4>Online Examination System</h4>
+	</div>
+	
+	<div class="header">
+		<img src="../images/tz-logo.png" alt="Tanzania Logo">
+	
+		<div class="title">
+			<h1>UNIVERSITY OF DAR ES SALAAM</h1>
+		</div>
+	
+		<img src="../images/udsm-logo.png" alt="UDSM Logo">
+	</div>
+<nav class="navbar">
+    <ul>
+        <li><a href="login.html">Student Login</a></li>
+        <li><a href="instructions.html">Exam Instructions</a></li>
+        <li><a href="exam.html">Start Exam</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Help Desk</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <div class="enquiry-header">
+        <div class="enquiry-content">
+            <h2>FOR ENQUIRIES</h2>
+            <p>Please do not hesitate to contact us through the contacts below:</p>
+        </div>
+    </div>
+
+    <div class="contact-flex">
+
+        <div class="left-section">
+            <div class="section">
+                <h3>UNDERGRADUATE</h3>
+                <h4>Admission Office</h4>
+                <p>+255 222 410 513</p>
+                <p>+255 738 452 891</p>
+                <p>+255 738 452 895</p>
+                <a href="mailto:admission.undergraduate@udsm.ac.tz">
+                    admission.undergraduate@udsm.ac.tz
+                </a>
+            </div>
+
+            <div class="section">
+                <h3>HELPDESK</h3>
+                <p>+255 795 100 902</p>
+                <p>+255 795 100 901</p>
+                <p>+255 795 100 907</p>
+                <p>+255 734 313 265</p>
+                <p>+255 785 740 283</p>
+                <p>+255 615 396 657</p>
+                <p>+255 686 434 520</p>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="section">
+                <h3>POSTGRADUATE</h3>
+                <h4>Admission Office</h4>
+                <p>+255 73 941 0016</p>
+                <p>+255 22 241 0016</p>
+                <a href="mailto:admission.dpgs@udsm.ac.tz">
+                    admission.dpgs@udsm.ac.tz
+                </a>
+            </div>
+
+            <div class="section">
+                <h4>Technical Support</h4>
+                <p>+255 73 941 0069</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="general-contacts">
+        <h3>General Contacts</h3>
+        <a href="mailto:admission.undergraduate@udsm.ac.tz">
+            admission.undergraduate@udsm.ac.tz
+        </a><br>
+        <a href="mailto:dpgs@udsm.ac.tz">
+            dpgs@udsm.ac.tz
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
