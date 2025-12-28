@@ -4,6 +4,120 @@
     <meta charset="UTF-8" />
     <title>UDSM Online Examination System</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f6f9;
+        margin: 0;
+        padding: 0;
+      }
+      .content {
+        padding: 20px;
+      }
+      .timetable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+        background: #ffffff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .timetable thead {
+        background: #0f2a44;
+        color: #ffffff;
+      }
+
+      .timetable th {
+        padding: 18px;
+        font-size: 0.85em;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+      }
+
+      .timetable td {
+        padding: 15px;
+        border-bottom: 1px solid #e3e6ea;
+        font-size: 0.95em;
+      }
+
+      .timetable tr:nth-child(even) {
+        background: #f7f9fc;
+      }
+
+      .timetable tr:hover td {
+        background: #edf2ff;
+      }
+
+      .day-row td {
+        background: #e6eefc;
+        color: #0f2a44;
+        font-weight: 600;
+        text-align: center;
+        font-size: 1em;
+        border-top: 2px solid #cbd9f5;
+        border-bottom: 2px solid #cbd9f5;
+      }
+
+      .note {
+        margin-top: 25px;
+        padding: 16px;
+        background: #fff8e1;
+        border-left: 6px solid #ffb300;
+        font-size: 0.95em;
+      }
+
+      h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        color: #0f2a44;
+        text-align: center;
+      }
+      .search-box {
+        margin: 25px 0 15px 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .search-box label {
+        font-weight: 600;
+        color: #0f2a44;
+      }
+
+      .search-box input {
+        padding: 10px 14px;
+        width: 220px;
+        border-radius: 8px;
+        border: 1px solid #ccd5e0;
+        font-size: 0.95em;
+        transition: all 0.2s ease;
+      }
+
+      .search-box input:focus {
+        outline: none;
+        border-color: #1e3c72;
+        box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.15);
+      }
+
+      /* .p.a {
+        padding: 10px 14px;
+        width: 220px;
+        border-radius: 8px;
+        border: 1px solid #ccd5e0;
+        font-size: 0.95em;
+        transition: all 0.2s ease;
+      } */
+
+      .search-box input:focus {
+        outline: none;
+        border-color: #1e3c72;
+        box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.15);
+      }
+    </style>
+    <script src="../js/timetable-filter.js" defer></script>
   </head>
   <body>
     <div class="top-bar">
@@ -20,6 +134,7 @@
       <img src="../images/udsm-logo.png" alt="UDSM Logo" />
     </div>
 
+    <!-- NAV BAR (UNCHANGED) -->
     <nav class="navbar">
       <ul>
         <li><a href="login.html">Student Login</a></li>
@@ -33,76 +148,156 @@
         <li><a href="contact.html">Help Desk</a></li>
       </ul>
     </nav>
+
+    <!-- MAIN CONTENT -->
     <main class="content">
-      <h2>Examination Timetable</h2>
+      <h2>University Examination Timetable – Semester I (2025/2026)</h2>
+
       <p>
-        The timetable below shows the scheduled examinations for the current
-        semester. Students are advised to check their courses carefully and
-        arrive at the venue at least 30 minutes before the examination time.
+        This timetable presents the official University Examination schedule for
+        Semester I, scheduled from <strong>6 March to 20 March 2026</strong>.
+        Students are required to attend examinations strictly according to their
+        registered courses, venues, and time slots.
       </p>
+      <div class="search-box">
+        <label for="courseSearch">Search by Course Code:</label>
+        <input
+          type="text"
+          id="courseSearch"
+          placeholder="e.g. CS151"
+          onkeyup="filterCourses()"
+        />
+      </div>
 
       <table class="timetable">
         <thead>
           <tr>
-            <th>Course Code</th>
-            <th>Course Name</th>
             <th>Date</th>
             <th>Time</th>
+            <th>Course Code</th>
             <th>Venue</th>
-            <th>Session</th>
           </tr>
         </thead>
+
         <tbody>
-          <tr>
-            <td>CS175</td>
-            <td>Introduction to Computer Programming</td>
-            <td>29 Sept 2025</td>
-            <td>07:30 – 10:30</td>
-            <td>D01 – Kijitonyama</td>
-            <td>Morning</td>
+          <!-- FRIDAY -->
+          <tr class="day-row">
+            <td colspan="4">Friday — 06 March 2026</td>
           </tr>
           <tr>
-            <td>BIT202</td>
-            <td>Database Management Systems</td>
-            <td>30 Sept 2025</td>
-            <td>11:30 – 14:30</td>
-            <td>UDBS3 / C520</td>
-            <td>Midday</td>
+            <td>06 Mar 2026</td>
+            <td>08:00 – 11:00</td>
+            <td>CS151</td>
+            <td>D01 – Kijitonyama (Luhanga Hall)</td>
           </tr>
           <tr>
+            <td>06 Mar 2026</td>
+            <td>14:00 – 17:00</td>
+            <td>DS112</td>
+            <td>Yombo 4</td>
+          </tr>
+
+          <!-- MONDAY -->
+          <tr class="day-row">
+            <td colspan="4">Monday — 09 March 2026</td>
+          </tr>
+          <tr>
+            <td>09 Mar 2026</td>
+            <td>08:00 – 11:00</td>
+            <td>CS174</td>
+            <td>S112</td>
+          </tr>
+          <tr>
+            <td>09 Mar 2026</td>
+            <td>14:00 – 17:00</td>
+            <td>IS162</td>
+            <td>Nkrumah Hall</td>
+          </tr>
+
+          <!-- WEDNESDAY -->
+          <tr class="day-row">
+            <td colspan="4">Wednesday — 11 March 2026</td>
+          </tr>
+          <tr>
+            <td>11 Mar 2026</td>
+            <td>08:00 – 11:00</td>
+            <td>MT100</td>
+            <td>A214</td>
+          </tr>
+          <tr>
+            <td>11 Mar 2026</td>
+            <td>14:00 – 17:00</td>
+            <td>IS158</td>
+            <td>UDBS1 / C033</td>
+          </tr>
+
+          <!-- FRIDAY -->
+          <tr class="day-row">
+            <td colspan="4">Friday — 13 March 2026</td>
+          </tr>
+          <tr>
+            <td>13 Mar 2026</td>
+            <td>08:00 – 11:00</td>
+            <td>CL111</td>
+            <td>Yombo 2</td>
+          </tr>
+          <tr>
+            <td>13 Mar 2026</td>
+            <td>14:00 – 17:00</td>
             <td>CS323</td>
-            <td>Software Engineering</td>
-            <td>01 Oct 2025</td>
-            <td>11:30 – 14:30</td>
             <td>B310 – Kijitonyama</td>
-            <td>Midday</td>
+          </tr>
+
+          <!-- MONDAY -->
+          <tr class="day-row">
+            <td colspan="4">Monday — 16 March 2026</td>
           </tr>
           <tr>
+            <td>16 Mar 2026</td>
+            <td>08:00 – 11:00</td>
             <td>IS246</td>
-            <td>Information Systems Analysis</td>
-            <td>02 Oct 2025</td>
-            <td>07:30 – 10:30</td>
-            <td>D01 – Kijitonyama</td>
-            <td>Morning</td>
+            <td>D01 – Kijitonyama (Luhanga Hall)</td>
           </tr>
           <tr>
+            <td>16 Mar 2026</td>
+            <td>14:00 – 17:00</td>
             <td>CS212</td>
-            <td>Data Structures</td>
-            <td>03 Oct 2025</td>
-            <td>15:00 – 17:55</td>
-            <td>D01 – Kijitonyama</td>
-            <td>Evening</td>
+            <td>SR11</td>
+          </tr>
+
+          <!-- FRIDAY -->
+          <tr class="day-row">
+            <td colspan="4">Friday — 20 March 2026</td>
+          </tr>
+          <tr>
+            <td>20 Mar 2026</td>
+            <td>08:00 – 11:00</td>
+            <td>ST215</td>
+            <td>A9</td>
+          </tr>
+          <tr>
+            <td>20 Mar 2026</td>
+            <td>14:00 – 17:00</td>
+            <td>DS211</td>
+            <td>COAF LR4</td>
           </tr>
         </tbody>
       </table>
 
       <p class="note">
-        <strong>Note:</strong> This timetable is subject to change. Any updates
-        will be communicated through the Online Examination System.
+        <strong>Examination Regulations:</strong> Students must arrive at the
+        venue at least 30 minutes before the examination begins. University
+        examination rules and regulations apply throughout the examination
+        period.
       </p>
 
-      <p>
-        <a href="../index.html">← Back to Home</a>
+      <p style="margin-top: 30px; padding: 10px 14px;
+        width: 220px;
+        border-radius: 8px;
+        border: 1px solid #ccd5e0;
+        font-size: 0.95em;
+        transition: all 0.2s ease;">
+        <a style="color: inherit; text-decoration: none;" href="../index.html">← Back to Home</a>
       </p>
     </main>
   </body>
