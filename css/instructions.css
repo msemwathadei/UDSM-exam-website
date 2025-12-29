@@ -1,0 +1,159 @@
+/* ===============================
+   GENERAL STYLES
+   =============================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   TOP BAR (LOGO + TITLE)
+   =============================== */
+.top-bar {
+    background-color: #003366; /* UDSM Blue */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.top-bar img {
+    width: 60px;
+    vertical-align: middle;
+}
+
+.top-bar h2 {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+.top-bar p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+/* ===============================
+   NAVIGATION MENU
+   =============================== */
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #0055a5;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    background-color: #003366;
+}
+
+/* ===============================
+   MAIN CONTAINER
+   =============================== */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.container h3 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* ===============================
+   INSTRUCTIONS LIST
+   =============================== */
+.instructions-list {
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+.instructions-list li {
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   AGREEMENT BOX
+   =============================== */
+.agree-box {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #eef4fb;
+    border-left: 5px solid #003366;
+    font-size: 15px;
+}
+
+.agree-box input {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+.btn-group {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Start Exam Button */
+#startBtn {
+    background-color: #003366;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#startBtn:hover {
+    background-color: #0055a5;
+}
+
+#startBtn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* Back to Home Button */
+.btn-home {
+    display: inline-block;
+    margin-left: 15px;
+    background-color: #555;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #333;
+}
