@@ -1,0 +1,102 @@
+ /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: #003366;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .top-bar img {
+            width: 60px;
+            vertical-align: middle;
+        }
+        .top-bar h2 {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .top-bar p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+
+        /* Navigation Menu */
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #0055a5;
+            overflow: hidden;
+            text-align: center;
+        }
+        .menu ul li {
+            display: inline-block;
+        }
+        .menu ul li a {
+            display: block;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+        }
+        .menu ul li a:hover {
+            background-color: #003366;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        table th {
+            background: #003366;
+            color: white;
+        }
+        .status-pass {
+            color: green;
+            font-weight: bold;
+        }
+        .status-fail {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Page Header */
+        h3 {
+            text-align: center;
+        }
+        /* Back to Home Button */
+.btn-home {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-home:hover {
+    background-color: #0055a5;
+}
